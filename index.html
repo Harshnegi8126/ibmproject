@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindMate AI | Student Wellness Companion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">✦</span> MindMate <small>STUDENT WELLNESS</small></a>
+    <nav><a href="#checkin">Mood check-in</a><a href="#tools">Wellness tools</a><a href="#support">Get support</a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A SMALL PAUSE CAN HELP</p>
+        <h1>Your well-being<br><span>matters, too.</span></h1>
+        <p class="intro">A calm, student-friendly space to check in with yourself, reset between tasks, and explore healthy ways to manage everyday study stress.</p>
+        <a class="primary-link" href="#checkin">Start a check-in <span>→</span></a>
+        <p class="tiny">Private demo • No account required • Not a medical service</p>
+      </div>
+      <div class="hero-art">
+        <div class="sun"></div><div class="plant">✿</div>
+        <div class="quote-card"><span class="quote-mark">“</span><p>You don't have to solve everything today. Start with one small step.</p><small>YOUR GENTLE REMINDER</small></div>
+        <div class="float-dot d1"></div><div class="float-dot d2"></div>
+      </div>
+    </section>
+
+    <section class="section" id="checkin">
+      <div class="section-heading"><div><p class="eyebrow">01 / CHECK IN</p><h2>How are you feeling today?</h2></div><p>There are no right or wrong answers.<br>Choose what feels closest right now.</p></div>
+      <div class="mood-grid">
+        <button class="mood" data-mood="Great"><span>☀️</span><b>Great</b><small>Feeling good</small></button>
+        <button class="mood" data-mood="Okay"><span>🌤️</span><b>Okay</b><small>Taking it as it comes</small></button>
+        <button class="mood" data-mood="Stressed"><span>🌧️</span><b>Stressed</b><small>A lot on my mind</small></button>
+        <button class="mood" data-mood="Low"><span>🌙</span><b>Low</b><small>Need a gentle moment</small></button>
+      </div>
+      <div id="mood-result" class="result-card" aria-live="polite"><div class="result-icon">♡</div><div><b>Your check-in will appear here.</b><p>Select a mood above to get a supportive suggestion.</p></div></div>
+    </section>
+
+    <section class="section tools-section" id="tools">
+      <div class="section-heading"><div><p class="eyebrow">02 / RESET</p><h2>Small tools, real breaks.</h2></div><p>Try one activity. You can stop whenever you want.</p></div>
+      <div class="tool-grid">
+        <article class="tool-card breathing">
+          <div class="tool-top"><span class="tool-icon">◉</span><span class="tag">60 SECONDS</span></div>
+          <h3>Breathing space</h3><p>Follow a gentle visual breathing rhythm. Keep it comfortable and breathe normally if this doesn't feel right for you.</p>
+          <div class="breath-circle" id="breath-circle"><span id="breath-text">Ready?</span></div>
+          <button class="button secondary" id="breath-button">Start breathing</button><p class="micro" id="breath-status">A short guided pause</p>
+        </article>
+        <article class="tool-card">
+          <div class="tool-top"><span class="tool-icon lavender">✎</span><span class="tag">2 MINUTES</span></div>
+          <h3>Thought parking lot</h3><p>Write down what is taking up your attention. This stays in this browser session only.</p>
+          <textarea id="thought-input" rows="4" placeholder="One thing on my mind is..."></textarea>
+          <button class="button secondary" id="thought-button">Save this thought locally</button><p class="micro" id="thought-status">Nothing is sent to a server.</p>
+        </article>
+        <article class="tool-card">
+          <div class="tool-top"><span class="tool-icon peach">✦</span><span class="tag">STUDY RESET</span></div>
+          <h3>One small next step</h3><p>When a task feels too big, make the next action smaller and easier to begin.</p>
+          <label for="task-input">What are you working on?</label>
+          <input id="task-input" type="text" placeholder="e.g. revise one maths topic">
+          <button class="button secondary" id="task-button">Make it manageable</button>
+          <div id="task-result" class="mini-result">Your next step will appear here.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section chat-section">
+      <div class="section-heading"><div><p class="eyebrow">03 / TALK IT THROUGH</p><h2>A supportive check-in</h2></div><p>This demo uses simple, predefined responses.<br>It is not a trained AI or therapist.</p></div>
+      <div class="chat-box">
+        <div class="chat-head"><span class="bot-avatar">✦</span><div><b>MindMate Guide</b><small><span class="online"></span> Demo support assistant</small></div></div>
+        <div id="chat-messages" class="chat-messages" aria-live="polite"><div class="bubble bot">Hi! What's on your mind today? You can choose a topic below, or type a short message. You don't need to share personal details.</div></div>
+        <form id="chat-form" class="chat-form"><input id="chat-input" type="text" placeholder="Type a message..." aria-label="Type a message"><button type="submit" aria-label="Send message">↑</button></form>
+        <div class="quick-prompts"><button data-prompt="I feel stressed about exams">Exam stress</button><button data-prompt="I cannot focus on studying">Focus</button><button data-prompt="I need encouragement">Encouragement</button><button data-prompt="I want to talk to someone">Find support</button></div>
+      </div>
+    </section>
+
+    <section class="support-band" id="support">
+      <div><p class="eyebrow">YOU DON'T HAVE TO HANDLE IT ALONE</p><h2>Support from a real person matters.</h2><p>If stress feels overwhelming, affects daily life, or you are worried about your safety, reach out to a trusted adult, school counsellor, or qualified mental-health professional. In India, Tele-MANAS provides mental-health support at <b>14416</b> or <b>1-800-891-4416</b>. If there is immediate danger, contact local emergency services.</p></div>
+      <div class="support-icon">♡</div>
+    </section>
+    <footer><div class="brand">✦ MindMate <small>STUDENT WELLNESS</small></div><p>Educational prototype • Built for SDG 3: Good Health and Well-being</p><p class="footer-note">MindMate does not diagnose, treat, or replace professional care. Demo responses are general wellness suggestions.</p></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
